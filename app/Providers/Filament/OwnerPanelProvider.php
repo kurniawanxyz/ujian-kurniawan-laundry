@@ -21,6 +21,7 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class OwnerPanelProvider extends PanelProvider
 {
+
     public function panel(Panel $panel): Panel
     {
         return $panel
@@ -53,6 +54,7 @@ class OwnerPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
                 RedirectToDashboard::class,
-            ]);
+            ])
+            ->databaseNotifications();
     }
 }

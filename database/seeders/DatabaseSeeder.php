@@ -20,11 +20,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\User::factory()->create([
+            'name' => "owner",
             'email' => 'owner@gmail.com',
             'role' => 'owner'
         ]);
 
         \App\Models\User::factory()->create([
+            'name' => "cashier",
             'email' => 'cashier@gmail.com',
             'role' => 'cashier'
         ]);

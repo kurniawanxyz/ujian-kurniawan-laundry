@@ -55,6 +55,7 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
                 RedirectToDashboard::class,
-            ]);
+            ])
+            ->databaseNotifications();
     }
 }
